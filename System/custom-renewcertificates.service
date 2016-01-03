@@ -1,0 +1,11 @@
+#/etc/systemd/system/custom-renewcertificates.service
+
+[Unit]
+Description=Renew Lets Encrypt certificates.
+
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/systemd/scripts/renewCertificates.sh
+
+[Install]
+WantedBy=multi-user.target

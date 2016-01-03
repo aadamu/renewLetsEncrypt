@@ -1,0 +1,11 @@
+#/etc/systemd/system/custom-renewcertificates.timer
+
+[Unit]
+Description=Run Lets Encrypt renewal service every two months.
+
+[Timer]
+OnCalendar=*-*-02 00:00:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
